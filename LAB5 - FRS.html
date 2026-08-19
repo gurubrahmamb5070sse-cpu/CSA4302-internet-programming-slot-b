@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flight Reservation System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>✈ Flight Reservation System</h1>
+</header>
+
+<div class="container">
+
+<h2>Login</h2>
+
+<input type="email" id="email" placeholder="Enter Email">
+
+<input type="password" id="password" placeholder="Enter Password">
+
+<button onclick="login()">Login</button>
+
+<hr>
+
+<h2>Search Flight</h2>
+
+<input type="text" id="from" placeholder="From">
+
+<input type="text" id="to" placeholder="Destination">
+
+<input type="date" id="date">
+
+<select id="flightClass">
+    <option value="">Select Class</option>
+    <option>Economy</option>
+    <option>Business</option>
+    <option>First Class</option>
+</select>
+
+<button onclick="searchFlight()">Search Flight</button>
+
+<hr>
+
+<h2>Book Ticket</h2>
+
+<input type="text" id="name" placeholder="Passenger Name">
+
+<input type="text" id="seat" placeholder="Seat Number">
+
+<button onclick="bookTicket()">Book Ticket</button>
+
+<hr>
+
+<h2>Ticket Payment</h2>
+
+<input type="number" id="amount" placeholder="Amount">
+
+<select id="payment">
+    <option value="">Payment Mode</option>
+    <option>UPI</option>
+    <option>Credit Card</option>
+    <option>Debit Card</option>
+</select>
+
+<button onclick="payment()">Pay Now</button>
+
+<hr>
+
+<h2>View Booking Status</h2>
+
+<input type="text" id="pnr" placeholder="Enter PNR Number">
+
+<button onclick="status()">Check Status</button>
+
+<hr>
+
+<h2>Cancel Ticket</h2>
+
+<input type="text" id="cancelpnr" placeholder="Enter PNR Number">
+
+<button onclick="cancelTicket()">Cancel Ticket</button>
+
+<hr>
+
+<h2>Customer Feedback</h2>
+
+<textarea id="feedback" placeholder="Enter Feedback"></textarea>
+
+<button onclick="feedback()">Submit Feedback</button>
+
+<hr>
+
+<h2>Admin Report</h2>
+
+<table border="1" width="100%">
+<tr>
+<th>Flight</th>
+<th>Booked</th>
+<th>Available</th>
+</tr>
+
+<tr>
+<td>AI101</td>
+<td>120</td>
+<td>30</td>
+</tr>
+
+<tr>
+<td>6E205</td>
+<td>95</td>
+<td>25</td>
+</tr>
+
+</table>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

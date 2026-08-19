@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Train Reservation System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🚆 Train Reservation System</h1>
+</header>
+
+<div class="container">
+
+<h2>Login</h2>
+
+<input type="email" id="email" placeholder="Email">
+
+<input type="password" id="password" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+<hr>
+
+<h2>Book Ticket</h2>
+
+<input type="text" id="name" placeholder="Passenger Name">
+
+<input type="text" id="from" placeholder="From Station">
+
+<input type="text" id="to" placeholder="To Station">
+
+<input type="date" id="date">
+
+<select id="class">
+    <option value="">Select Class</option>
+    <option>Sleeper</option>
+    <option>AC</option>
+    <option>First Class</option>
+</select>
+
+<button onclick="bookTicket()">Book Ticket</button>
+
+<hr>
+
+<h2>Check PNR Status</h2>
+
+<input type="text" id="pnr" placeholder="Enter PNR Number">
+
+<button onclick="checkPNR()">Check Status</button>
+
+<hr>
+
+<h2>Cancel Ticket</h2>
+
+<input type="text" id="cancelpnr" placeholder="Enter PNR Number">
+
+<button onclick="cancelTicket()">Cancel Ticket</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
