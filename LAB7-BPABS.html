@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Beauty Parlour Appointment System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>💄 Beauty Parlour Appointment Booking</h1>
+</header>
+
+<div class="container">
+
+<h2>Customer Login</h2>
+
+<input type="email" id="email" placeholder="Enter Email">
+
+<input type="password" id="password" placeholder="Enter Password">
+
+<button onclick="login()">Login</button>
+
+<hr>
+
+<h2>Customer Registration</h2>
+
+<input type="text" id="name" placeholder="Full Name">
+
+<input type="email" id="regemail" placeholder="Email">
+
+<input type="password" id="regpass" placeholder="Password">
+
+<button onclick="registerUser()">Register</button>
+
+<hr>
+
+<h2>Book Appointment</h2>
+
+<select id="service">
+<option value="">Select Service</option>
+<option>Hair Cut</option>
+<option>Hair Spa</option>
+<option>Facial</option>
+<option>Makeup</option>
+<option>Bridal Package</option>
+</select>
+
+<select id="stylist">
+<option value="">Select Stylist</option>
+<option>Anjali</option>
+<option>Priya</option>
+<option>Sneha</option>
+</select>
+
+<input type="date" id="date">
+
+<input type="time" id="time">
+
+<button onclick="bookAppointment()">Book Appointment</button>
+
+<hr>
+
+<h2>Payment</h2>
+
+<input type="number" id="amount" placeholder="Amount">
+
+<select id="payment">
+<option value="">Select Payment</option>
+<option>UPI</option>
+<option>Credit Card</option>
+<option>PayPal</option>
+</select>
+
+<button onclick="payment()">Pay Now</button>
+
+<hr>
+
+<h2>Appointment Status</h2>
+
+<input type="text" id="appointment" placeholder="Appointment ID">
+
+<button onclick="status()">View Status</button>
+
+<hr>
+
+<h2>Cancel Appointment</h2>
+
+<input type="text" id="cancelid" placeholder="Appointment ID">
+
+<button onclick="cancelAppointment()">Cancel</button>
+
+<hr>
+
+<h2>Customer Feedback</h2>
+
+<textarea id="feedback" placeholder="Enter Feedback"></textarea>
+
+<button onclick="feedback()">Submit Feedback</button>
+
+<hr>
+
+<h2>Admin Login</h2>
+
+<input type="text" id="admin">
+
+<input type="password" id="adminpass">
+
+<button onclick="adminLogin()">Login</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

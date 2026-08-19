@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Online Cake Ordering System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<h1>🎂 Online Cake Ordering System</h1>
+
+</header>
+
+<div class="container">
+
+<h2>Student Login</h2>
+
+<input type="email" id="email" placeholder="Email">
+
+<input type="password" id="password" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+<hr>
+
+<h2>Student Registration</h2>
+
+<input type="text" id="name" placeholder="Full Name">
+
+<input type="email" id="regemail" placeholder="Email">
+
+<input type="password" id="regpass" placeholder="Password">
+
+<button onclick="registerUser()">Register</button>
+
+<hr>
+
+<h2>Search Cake</h2>
+
+<input type="text" id="search" placeholder="Cake Name">
+
+<select id="category">
+<option value="">Select Category</option>
+<option>Birthday Cake</option>
+<option>Wedding Cake</option>
+<option>Chocolate Cake</option>
+<option>Fruit Cake</option>
+</select>
+
+<select id="price">
+<option value="">Price Range</option>
+<option>₹500 - ₹1000</option>
+<option>₹1000 - ₹2000</option>
+<option>Above ₹2000</option>
+</select>
+
+<button onclick="searchCake()">Search</button>
+
+<hr>
+
+<h2>Cake Details</h2>
+
+<p><b>Name:</b> Chocolate Cake</p>
+
+<p><b>Price:</b> ₹800</p>
+
+<p><b>Description:</b> Fresh Chocolate Cake</p>
+
+<button onclick="cart()">Add to Cart</button>
+
+<hr>
+
+<h2>Shipping Address</h2>
+
+<textarea id="address" placeholder="Enter Address"></textarea>
+
+<button onclick="saveAddress()">Save Address</button>
+
+<hr>
+
+<h2>Place Order</h2>
+
+<button onclick="placeOrder()">Place Order</button>
+
+<hr>
+
+<h2>View Shipping Status</h2>
+
+<input type="text" id="orderid" placeholder="Order ID">
+
+<button onclick="shippingStatus()">Check Status</button>
+
+<hr>
+
+<h2>Admin Login</h2>
+
+<input type="text" id="admin">
+
+<input type="password" id="adminpass">
+
+<button onclick="adminLogin()">Login</button>
+
+<hr>
+
+<h2>Manage Products</h2>
+
+<input type="text" id="cake">
+
+<input type="number" id="cakeprice">
+
+<button onclick="addCake()">Post Cake</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

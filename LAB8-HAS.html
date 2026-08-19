@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Hospital Appointment Booking System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>🏥 Hospital Appointment Booking System</h1>
+</header>
+
+<div class="container">
+
+<h2>Patient Login</h2>
+
+<input type="email" id="email" placeholder="Email">
+
+<input type="password" id="password" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+<hr>
+
+<h2>Patient Registration</h2>
+
+<input type="text" id="name" placeholder="Patient Name">
+
+<input type="email" id="regemail" placeholder="Email">
+
+<input type="password" id="regpass" placeholder="Password">
+
+<button onclick="registerUser()">Register</button>
+
+<hr>
+
+<h2>Search Doctor</h2>
+
+<input type="text" id="location" placeholder="Location">
+
+<select id="speciality">
+<option value="">Select Speciality</option>
+<option>Cardiologist</option>
+<option>Dermatologist</option>
+<option>Orthopedic</option>
+<option>Neurologist</option>
+</select>
+
+<button onclick="searchDoctor()">Search</button>
+
+<hr>
+
+<h2>Book Appointment</h2>
+
+<input type="text" id="doctor" placeholder="Doctor Name">
+
+<input type="date" id="date">
+
+<input type="time" id="time">
+
+<button onclick="bookAppointment()">Book Appointment</button>
+
+<hr>
+
+<h2>Appointment Status</h2>
+
+<input type="text" id="appointmentid" placeholder="Appointment ID">
+
+<button onclick="viewStatus()">View Status</button>
+
+<hr>
+
+<h2>Cancel Appointment</h2>
+
+<input type="text" id="cancelid" placeholder="Appointment ID">
+
+<button onclick="cancelAppointment()">Cancel Appointment</button>
+
+<hr>
+
+<h2>Patient Feedback</h2>
+
+<textarea id="feedback" placeholder="Write Review"></textarea>
+
+<button onclick="submitFeedback()">Submit</button>
+
+<hr>
+
+<h2>Hospital Login</h2>
+
+<input type="text" id="hospital">
+
+<input type="password" id="hospitalpass">
+
+<button onclick="hospitalLogin()">Login</button>
+
+<hr>
+
+<h2>Hospital Details</h2>
+
+<input type="text" id="hospitalname" placeholder="Hospital Name">
+
+<input type="text" id="hospitalplace" placeholder="Location">
+
+<button onclick="updateHospital()">Update Details</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
