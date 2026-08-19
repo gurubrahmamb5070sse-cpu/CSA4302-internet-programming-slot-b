@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home Finder</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f4f7fb;
+color:#333;
+}
+
+header{
+background:#0d6efd;
+color:white;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+}
+
+.logo{
+font-size:28px;
+font-weight:700;
+}
+
+nav a{
+text-decoration:none;
+color:white;
+margin-left:25px;
+font-weight:500;
+}
+
+.hero{
+height:500px;
+background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+url("https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=1200");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:45px;
+margin-bottom:15px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:30px;
+}
+
+.search-box{
+background:white;
+padding:25px;
+border-radius:12px;
+width:80%;
+max-width:1000px;
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+margin:auto;
+margin-top:-60px;
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.search-box input,
+.search-box select{
+padding:12px;
+border:1px solid #ccc;
+border-radius:8px;
+font-size:15px;
+}
+
+.search-box button{
+background:#0d6efd;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+font-size:16px;
+}
+
+.search-box button:hover{
+background:#0b5ed7;
+}
+
+.section-title{
+text-align:center;
+margin:60px 0 30px;
+font-size:34px;
+}
+
+.cards{
+width:90%;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+padding-bottom:50px;
+}
+
+.card{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card-content{
+padding:18px;
+}
+
+.price{
+color:#0d6efd;
+font-size:24px;
+font-weight:700;
+margin:10px 0;
+}
+
+.location{
+color:#666;
+margin-bottom:10px;
+}
+
+button.view{
+width:100%;
+padding:12px;
+background:#0d6efd;
+color:white;
+border:none;
+border-radius:8px;
+cursor:pointer;
+}
+
+button.view:hover{
+background:#0b5ed7;
+}
+
+footer{
+background:#111827;
+color:white;
+padding:25px;
+text-align:center;
+}
+
+@media(max-width:900px){
+
+.search-box{
+grid-template-columns:1fr;
+margin-top:20px;
+width:90%;
+}
+
+.hero h1{
+font-size:32px;
+}
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:10px;
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">🏠 Home Finder</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#">Properties</a>
+<a href="#">Agents</a>
+<a href="#">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>Find Your Dream Home</h1>
+
+<p>Search houses, apartments and lands at the best price.</p>
+
+</div>
+
+</section>
+
+<div class="search-box">
+
+<input type="text" id="location" placeholder="Location">
+
+<select id="type">
+<option>House</option>
+<option>Apartment</option>
+<option>Villa</option>
+<option>Land</option>
+</select>
+
+<input type="number" id="budget" placeholder="Maximum Budget">
+
+<button onclick="searchProperty()">Search</button>
+
+</div>
+
+<h2 class="section-title">Featured Properties</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600">
+
+<div class="card-content">
+
+<h3>Modern Villa</h3>
+
+<div class="price">$250,000</div>
+
+<div class="location">📍 New York</div>
+
+<p>3 Bedrooms • 2 Bathrooms • Garden</p>
+
+<br>
+
+<button class="view" onclick="details('Modern Villa')">View Details</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=600">
+
+<div class="card-content">
+
+<h3>Luxury Apartment</h3>
+
+<div class="price">$180,000</div>
+
+<div class="location">📍 California</div>
+
+<p>2 Bedrooms • Parking • Balcony</p>
+
+<br>
+
+<button class="view" onclick="details('Luxury Apartment')">View Details</button>
+
+</div>
+
+</div>
+
+<div class="card">
+
+<img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=600">
+
+<div class="card-content">
+
+<h3>Family House</h3>
+
+<div class="price">$120,000</div>
+
+<div class="location">📍 Texas</div>
+
+<p>4 Bedrooms • Garage • Garden</p>
+
+<br>
+
+<button class="view" onclick="details('Family House')">View Details</button>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>© 2026 Home Finder | Internet Programming Project</p>
+
+</footer>
+
+<script>
+
+function searchProperty(){
+
+let location=document.getElementById("location").value;
+let type=document.getElementById("type").value;
+let budget=document.getElementById("budget").value;
+
+alert(
+"Searching...\n\n"+
+"Location : "+location+
+"\nProperty : "+type+
+"\nBudget : "+budget
+);
+
+}
+
+function details(name){
+
+alert("Opening details for "+name);
+
+}
+
+</script>
+
+</body>
+</html>

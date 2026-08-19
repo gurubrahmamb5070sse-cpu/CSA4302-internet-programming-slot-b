@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Online Electronics Shopping System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>🛒 TechSavvy Electronics Store</h1>
+</header>
+
+<div class="container">
+
+<h2>User Login</h2>
+
+<input type="email" id="email" placeholder="Email">
+
+<input type="password" id="password" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+<hr>
+
+<h2>User Registration</h2>
+
+<input type="text" id="name" placeholder="Full Name">
+
+<input type="email" id="regemail" placeholder="Email">
+
+<input type="password" id="regpass" placeholder="Password">
+
+<button onclick="registerUser()">Register</button>
+
+<hr>
+
+<h2>Search Product</h2>
+
+<input type="text" id="search" placeholder="Search Product">
+
+<select id="category">
+<option value="">Select Category</option>
+<option>Mobile</option>
+<option>Laptop</option>
+<option>Tablet</option>
+<option>Accessories</option>
+</select>
+
+<button onclick="searchProduct()">Search</button>
+
+<hr>
+
+<h2>Product Details</h2>
+
+<p><b>Product:</b> iPhone 16</p>
+<p><b>Price:</b> ₹79,999</p>
+<p><b>Availability:</b> In Stock</p>
+
+<button onclick="addCart()">Add to Cart</button>
+
+<hr>
+
+<h2>Shopping Cart</h2>
+
+<input type="text" id="product" placeholder="Product Name">
+
+<button onclick="removeCart()">Remove Item</button>
+
+<button onclick="checkout()">Checkout</button>
+
+<hr>
+
+<h2>Order Status</h2>
+
+<input type="text" id="orderid" placeholder="Order ID">
+
+<button onclick="orderStatus()">Check Status</button>
+
+<hr>
+
+<h2>Order History</h2>
+
+<button onclick="history()">View History</button>
+
+<hr>
+
+<h2>Admin Login</h2>
+
+<input type="text" id="admin">
+
+<input type="password" id="adminpass">
+
+<button onclick="adminLogin()">Login</button>
+
+<hr>
+
+<h2>Manage Products</h2>
+
+<input type="text" id="item" placeholder="Product Name">
+
+<input type="number" id="price" placeholder="Price">
+
+<button onclick="addProduct()">Add Product</button>
+
+<button onclick="updateProduct()">Update Price</button>
+
+<button onclick="deleteProduct()">Delete Product</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
